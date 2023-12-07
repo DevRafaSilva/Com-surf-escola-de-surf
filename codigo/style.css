@@ -301,10 +301,14 @@ header {
   display: block;
 }
 
-.conteudo-carrinho span {
-  display: block;
+.conteudo-carrinho {
   border-top: 5px solid black;
   border-bottom: 5px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.conteudo-carrinho .total {
   padding: 10px;
 }
 
@@ -1018,4 +1022,8 @@ p {
   .infos-gerais-footer {
     grid-template-columns: auto;
   }
+}
+
+.carrinho-section.on {
+  display: block !important;
 }

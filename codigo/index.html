@@ -86,8 +86,11 @@
     <section class="carrinho-section">
       <div data-container-carrinho="" class="carrinho-item">
         <div class="item-carrinho"></div>
-        <div class="conteudo-carrinho">
-          <span>TOTAL</span>
+        <div
+          class="border-top: 5px solid black; border-bottom: 5px solid black;"
+        >
+          <span class="total">TOTAL:</span>
+          <span class="total-produto"></span>
         </div>
         <div class="btn-secundario">
           <a href="">COMPRAR</a>
@@ -273,13 +276,13 @@
               >
                 <img src="/addimg/Vector.svg" alt="" />
               </div>
-              <img src="/Skate/skate1.jpg" alt="" />
+              <img data-carrinho-item src="/Skate/skate1.jpg" alt="" />
             </div>
             <div class="conteudo-item-produtos">
               <span>Skate em estoque</span>
-              <h3>Skate long Element</h3>
+              <h3 data-carrinho-item>Skate long Element</h3>
               <a class="btn-comprar">+COMPRAR</a>
-              <span class="Preco-none">R$1.360,00</span>
+              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
               <p>10X de R$ 360,00 sem juros</p>
             </div>
           </div>
