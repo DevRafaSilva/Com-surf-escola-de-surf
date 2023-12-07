@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>comSurf</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&family=Inter:wght@300&family=Italiana&family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Italiana&family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="menu-de-navegacao">
+          <div class="logo-nav">
+            <img class="logo" src="/logo/logo_comsurf2.png" alt="" />
+          </div>
+          <div class="barra-de-pesquisa">
+            <input type="text" />
+            <img
+              src="/icones-header/search_FILL0_wght400_GRAD0_opsz24 1.svg"
+              alt=""
+            />
+          </div>
+          <img
+            class="menu-mobile"
+            src="/icones-header/menu_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+          <div class="links-nav">
+            <div class="container-dropdown-menu">
+              <li><a data-produtos class="produtos" href="">Produtos</a></li>
+              <div class="dropdown-container">
+                <ul class="dropdown-itens-link">
+                  <li><a href="">Pranchas de surf</a></li>
+                  <li><a href="">Quilhas</a></li>
+                  <li><a href="">Equipamentos</a></li>
+                  <li><a href="">SkimBoard</a></li>
+                  <li><a href="">Sup</a></li>
+                  <li><a href="">WetSuit</a></li>
+                  <li><a href="">Skate</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="login-container">
+              <li>
+                <a data-login-link href=""
+                  ><img
+                    class="imagem-icon"
+                    src="/icones-header/person_FILL0_wght400_GRAD0_opsz24 1.svg"
+                    alt=""
+                  />login</a
+                >
+              </li>
+            </div>
+            <li>
+              <a data-cadastrese-link class="btn-principal" href=""
+                >CADASTRE-SE</a
+              >
+            </li>
+            <li>
+              <a data-carrinho-de-compras="" href=""
+                ><img
+                  class="imagem-icon"
+                  src="/icones-header/Vector.svg "
+                  alt=""
+                />Carrinho</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <section class="carrinho-section">
+      <div data-container-carrinho="" class="carrinho-item">
+        <div class="item-carrinho"></div>
+        <div class="conteudo-carrinho">
+          <span>TOTAL</span>
+        </div>
+        <div class="btn-secundario">
+          <a href="">COMPRAR</a>
+        </div>
+      </div>
+    </section>
+    <section data-login-section class="login-section">
+      <div data-container class="login-conteudo">
+        <form action="get">
+          <span data-btn-fechar class="btn-fechar">X</span>
+          <div class="email">
+            <label for="email">Email</label>
+            <div class="icone">
+              <img src="/icones-input/emailicone.svg" alt="" />
+              <input type="email" name="" id="" />
+            </div>
+          </div>
+          <div class="senha">
+            <label for="senha">Senha</label>
+            <div class="icone">
+              <input type="password" />
+              <img
+                class="icone-input"
+                src="/icones-input/key_FILL0_wght400_GRAD0_opsz24 3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="infos-sobre-senha">
+            <div class="info-senha">
+              <a href="">Perdeu a senha?</a>
+            </div>
+            <div class="btn-form">
+              <a href="">Entrar</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section data-cadastrese-container class="cadastrese-section">
+      <div data-cadastrese class="cadastrese-conteudo">
+        <form action="get">
+          <span data-cadastrese-fechar class="btn-fechar">X</span>
+          <div class="infos-name">
+            <div class="name">
+              <label for="nome">Nome</label>
+              <input type="text" />
+            </div>
+            <div class="name2">
+              <label for="nome">Sobrenome</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div class="infos-gerais">
+            <div class="infos">
+              <label for="nome">Email</label>
+              <input type="text" />
+            </div>
+            <div class="infos">
+              <label for="nome">CPF</label>
+              <input type="text" />
+            </div>
+            <div class="infos">
+              <label for="nome">Senha</label>
+              <input type="password" />
+            </div>
+          </div>
+          <div class="btn-form">
+            <a href="">Entrar</a>
+          </div>
+        </form>
+      </div>
+    </section>
+    <main class="imagens-main-carrosel">
+      <div class="numero-carrosel">
+        <span class="numero-on">1</span>
+        <span>2</span>
+      </div>
+      <div class="carrosel-item">
+        <div class="seta-prox">
+          <img
+            src="/icones-arrow/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </div>
+        <div class="seta-prev">
+          <img
+            src="/icones-arrow/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+        </div>
+        <div class="imgs-item">
+          <img
+            class="slide-img on"
+            src="/Carrosel imagens/Rectangle 6.png"
+            alt=""
+          />
+          <img class="slide-img" src="/Carrosel imagens/carrosel1.png" alt="" />
+        </div>
+      </div>
+    </main>
+    <article class="contato-e-infos">
+      <div class="container-info">
+        <div class="info-item">
+          <img src="/Icones sobre/icon_3.png" alt="" />
+          <div class="info-texto">
+            <h3>ENVIAMOS PARA TODO O BRASIL</h3>
+            <p>
+              Receba sua prancha de surfe e equipamentos em uma embalagem segura
+              e exclusiva.
+            </p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="/Icones sobre/icon_whats.png" alt="" />
+          <div class="info-texto">
+            <h3>ATENDIMENTO PERSONALIZADO</h3>
+            <p>
+              Equipe de especialistas prontos para te atender via telefone e
+              whatsApp (seg. à sex. das 09am as 6pm).
+            </p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="/Icones sobre/icon_1.png" alt="" />
+          <div class="info-texto">
+            <h3>20% DE DESCONTO EM EQUIPAMENTOS</h3>
+            <p>
+              Na compra de prancha de qualquer prancha de surf, você ganha 20%
+              de desconto nos equipamentos .
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="Produtos-section">
+      <h1>SURFE NESSAS OPÇÕES</h1>
+      <div class="navegacao-tab">
+        <div class="conteudo-tab">
+          <div class="tab on">
+            <h4>Skate</h4>
+          </div>
+          <div class="tab">
+            <h4>Pranchas</h4>
+          </div>
+          <div class="tab">
+            <h4>Quilhas</h4>
+          </div>
+        </div>
+      </div>
+      <!-- SKATE PRODUTO -->
+      <div class="tabnav-event on">
+        <div class="index-carrosel top-label">
+          <div class="label on">
+            <label for=""></label>
+          </div>
+          <div class="label">
+            <label for=""></label>
+          </div>
+        </div>
+        <div class="arrow-navegacao">
+          <div class="next">
+            <img
+              src="/icones-arrow/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+          <div class="prev">
+            <img
+              src="/icones-arrow/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- SKATE CARROSEL 1 -->
+        <div class="evento-carrosel on">
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate1.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Element</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate2.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Flip</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.800,00</span>
+              <p>9X de R$ 200,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate3.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Creme</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$2.360,00</span>
+              <p>10X de R$ 230,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate4.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Exit</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+        </div>
+        <!-- SKATE CARROSEL 2 -->
+        <div class="evento-carrosel">
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate4.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Element</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate1.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Flip</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.800,00</span>
+              <p>9X de R$ 200,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate2.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Flip</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.800,00</span>
+              <p>9X de R$ 200,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Skate/skate3.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Flip</h3>
+              <a class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.800,00</span>
+              <p>9X de R$ 200,00 sem juros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- PRANCHA DE SURF PRODUTO -->
+      <div class="tabnav-event">
+        <div class="arrow-navegacao">
+          <div class="index-carrosel top-label">
+            <div class="label on">
+              <label for=""></label>
+            </div>
+            <div class="label">
+              <label for=""></label>
+            </div>
+          </div>
+          <div class="next">
+            <img
+              src="/icones-arrow/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+          <div class="prev">
+            <img
+              src="/icones-arrow/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="evento-carrosel on">
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/prancha1.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>prancha de surf em estoque</span>
+              <h3>Prancha long Exit</h3>
+              <span class="Preco-none">R$4.360,00</span>
+              <p>10X de R$ 466,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/prancha3.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>prancha de surf em estoque</span>
+              <h3>Prancha Lost</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$3.360,00</span>
+              <p>10X de R$ 336,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/prancha4.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>prancha de surf em estoque</span>
+              <h3>Prancha legend</h3>
+              <a href="" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$2.360,00</span>
+              <p>10X de R$ 236,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/pramcha6.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>prancha de surf em estoque</span>
+              <h3>Prancha legend</h3>
+              <a href="" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$2.360,00</span>
+              <p>10X de R$ 236,00 sem juros</p>
+            </div>
+          </div>
+        </div>
+        <!-- PRANCHA DE SURF CARROSEL 2 -->
+        <div class="evento-carrosel">
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/prancha5.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Element</h3>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/pramcha6.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>prancha de surf em estoque</span>
+              <h3>Prancha Lost</h3>
+              <a href="" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$3.360,00</span>
+              <p>10X de R$ 336,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/prancha3.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>prancha de surf em estoque</span>
+              <h3>Prancha legend</h3>
+              <a href="" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$2.360,00</span>
+              <p>10X de R$ 236,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/prancha/pranch2.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>prancha de surf em estoque</span>
+              <h3>Prancha legend</h3>
+              <a href="" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$2.360,00</span>
+              <p>10X de R$ 236,00 sem juros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- QUILHA PRODUTO  -->
+      <div class="tabnav-event">
+        <div class="arrow-navegacao">
+          <div class="index-carrosel top-label">
+            <div class="label on">
+              <label for=""></label>
+            </div>
+            <div class="label">
+              <label for=""></label>
+            </div>
+          </div>
+          <div class="next">
+            <img
+              src="/icones-arrow/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+          <div class="prev">
+            <img
+              src="/icones-arrow/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <!-- QUILHA CARROSEL 1 -->
+        <div class="evento-carrosel on">
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha1.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Quilha em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha4.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Quilha em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha2.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Quilha em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha3.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Quilha em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+        </div>
+        <!-- QUILHA CARROSEL 2 -->
+        <div class="evento-carrosel">
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha4.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha2.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha3.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+          <div class="produto-item-conteudo">
+            <div class="produtos-item">
+              <div
+                class="tooltip"
+                data-toolti-event
+                aria-label="Adicionar ao carrinho"
+              >
+                <img src="/addimg/Vector.svg" alt="" />
+              </div>
+              <img src="/Quilhas/quilha4.jpg" alt="" />
+            </div>
+            <div class="conteudo-item-produtos">
+              <span>Skate em estoque</span>
+              <h3>Skate long Element</h3>
+              <a href="#" class="btn-comprar">+COMPRAR</a>
+              <span class="Preco-none">R$1.360,00</span>
+              <p>10X de R$ 360,00 sem juros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="index-carrosel bottom-label-none">
+        <div class="label on">
+          <label for=""></label>
+        </div>
+        <div class="label">
+          <label for=""></label>
+        </div>
+      </div>
+    </section>
+    <section class="apresentacao-prancha">
+      <div class="conteudo-apresentacao">
+        <div class="texto-apresentacao">
+          <div class="titulo-apresentacao">
+            <h1 class="titulo-apresentacao">
+              <span class="titulo-span"> FOGUETE DO MÊS</span> PRANCHA LOST
+              <span class="titulo-detalhe-light"> DRIVER 3.0</span>
+            </h1>
+          </div>
+          <div class="paragrafo-apresentacao-div">
+            <p class="paragrafo-apresentacao">
+              A prancha Lost Driver 3.0 é o que há de melhor hoje em dia para
+              alta performance em boas condições de ondas. Ela é a evolução da
+              Driver 2.0, aperfeiçoada depois de inúmeros feedbacks dos melhores
+              atletas da Lost em diversas ondas do planeta nos últimos anos.
+              Essas melhorias aumentaram o volume e acrescentaram mais
+              velocidade a Driver 3.0, o que beneficia e ajuda também o surf de
+              surfistas amadores.
+            </p>
+          </div>
+        </div>
+        <div class="imagem-apresentacao">
+          <img
+            src="/imagem-apresentacao/mathieu-chirico-sFSZuKI2CvY-unsplash 1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <article class="formulario">
+      <div class="login">
+        <form class="orcamento-formulario" action="get">
+          <h1>SOLICITE UM ORÇAMENTO</h1>
+          <div class="form-item">
+            <div class="nome">
+              <label for="name">Nome</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="sobrenome">
+              <label for="name2">Sobrenome</label>
+              <input type="text" name="name2" id="name2" />
+            </div>
+            <div class="info-geral">
+              <div class="info-geral">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="info-geral">
+                <label for="cpf">CPF</label>
+                <input type="number" name="cpf" id="cpf" />
+              </div>
+              <div class="info-geral">
+                <label for="telefone">telefone</label>
+                <input type="number" name="telefone" id="telefone" />
+              </div>
+            </div>
+            <div class="btn-orcamento">
+              <a href="">ENVIAR</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="login">
+        <h1>Login</h1>
+        <form class="form-login" action="get">
+          <div class="login-form">
+            <div class="email">
+              <label for="email">Email</label>
+              <input type="email" />
+            </div>
+            <div class="senha">
+              <label for="senha">Senha</label>
+              <input type="senh" />
+            </div>
+            <div class="btn-login">
+              <a href="">Logar</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </article>
+    <footer class="footer-container">
+      <div class="logo">
+        <img src="/logo/logo_comsurf2.png" alt="" />
+      </div>
+      <div class="vantagens-footer">
+        <div class="conteudo-vantagens">
+          <h2>VANTAGENS COMSURF</h2>
+          <h3>Qualidade Garantida</h3>
+          <p>
+            Os melhores equipamentos de surf entregues com cuidado na sua casa
+          </p>
+          <p>
+            Até 10 vezes Sem Juros no cartão. Ou 7% de desconto no boleto
+            (exceto pranchas Rusty e Hayden Shapes que tem 5% de desconto).
+          </p>
+        </div>
+      </div>
+      <div class="infos-gerais-footer">
+        <div class="redes-sociais">
+          <h2>SIGA O COMSURF</h2>
+          <a href="">Facebook</a>
+          <a href="">Twitter</a>
+          <a href="">Instagram</a>
+        </div>
+        <div class="links-gerais">
+          <h3>Principais categorias do comSurf:</h3>
+          <a href="">Prancha de surf</a>
+          <a href="">QUILHAS</a>
+          <a href="">SUP</a>
+          <a href="">SKIMBOARD</a>
+          <a href="">wETsUIT</a>
+          <a href="">Skate</a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

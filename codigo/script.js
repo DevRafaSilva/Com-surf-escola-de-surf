@@ -1,0 +1,21 @@
+import drop from "./script-events-items/dropdownmenu.js";
+import menumobile from "./script-events-items/menumobile.js";
+import carrinho from "./script-events-items/menuCarrinho.js";
+import loginEvent from "./script-events-items/Login.js";
+import cadastreseEvent from "./script-events-items/cadastrese.js";
+import carroselEvent from "./script-events-items/carrosel.js";
+import TabnavEvent from "./script-events-items/tabProdutos.js";
+import carroselProdutoEvent from "./script-events-items/carroselpProdutos.js";
+import TooltipEvent from "./script-events-items/tooltipbox.js";
+import carrinhoEvent from "./script-events-items/carrinhodeCompras.js";
+
+drop();
+menumobile();
+carrinho();
+loginEvent();
+cadastreseEvent();
+carroselEvent();
+TabnavEvent();
+carroselProdutoEvent();
+TooltipEvent();
+carrinhoEvent();
