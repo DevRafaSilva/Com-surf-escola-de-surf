@@ -282,9 +282,9 @@ header {
 }
 
 .carrinho-section {
-  right: 250px;
+  right: 350px;
   position: absolute;
-  z-index: 60;
+  z-index: 100;
 }
 
 .carrinho-item {
@@ -295,10 +295,17 @@ header {
   border: 5px solid black;
   z-index: 10;
   border-radius: 8px;
+  width: 300px;
 }
 
 .carrinho-item.ativo {
   display: block;
+}
+
+.border {
+  padding: 15px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
 }
 
 .conteudo-carrinho {
@@ -313,8 +320,9 @@ header {
 }
 
 .item-carrinho {
-  padding: 20px 120px;
+  padding: 20px 20px;
   height: 30vh;
+  overflow-y: scroll;
 }
 
 .btn-secundario {
@@ -1024,6 +1032,7 @@ p {
   }
 }
 
-.carrinho-section.on {
-  display: block !important;
+.item-carrinho span {
+  margin-top: 20px;
+  background-color: #027b7f;
 }

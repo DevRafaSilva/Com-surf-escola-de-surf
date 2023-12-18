@@ -1,12 +1,13 @@
 export default function carrinhoEvent() {
-  const produtoEvent = document.querySelector("[data-carrinho-item]");
-  const addProduto = document.querySelectorAll("[data-toolti-event]");
-  const carrinhBlock = document.querySelector(".carrinho-section");
-  const containerCarrinhoItem = document.querySelectorAll(".item-carrinho");
+  let produtoEvent = document.querySelectorAll("[data-carrinho-item]");
+  let addProduto = document.querySelectorAll("[data-toolti-event]");
 
   function addEvent(index) {
-    console.log((produtoEvent.innerHTML = containerCarrinhoItem));
-    carrinhBlock.classList.add("on");
+    produtoEvent.forEach(() => {});
+    let carrinhoDiv = document.createElement("div");
+    carrinhoDiv.classList.add("carrinho-on");
+    carrinhoDiv.innerHTML = produtoEvent[index].innerHTML;
+    document.querySelector(".item-carrinho").appendChild(carrinhoDiv);
   }
 
   addProduto.forEach((itemclick, index) => {

@@ -18,8 +18,6 @@ export default function TooltipEvent() {
     element: "",
     handleEvent() {
       this.tooltipbox.remove();
-      this.tooltipbox.removeEventlistener("mouseleave", onmouseleave);
-      this.tooltipbox.removeEventlistener("mousemove", onmousemove);
     },
   };
 
