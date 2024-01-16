@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: aqua;
+}
+
+.menu-de-navegacao {
+  margin-bottom: 60px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  padding: 30px 60px;
+  justify-content: space-between;
+}
+
+a {
+  color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+.conteudo-perfil-item {
+  margin-right: 30px;
+  margin-left: 60px;
+  width: fit-content;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.imagens-compras-recentes {
+  display: grid;
+  grid-template-columns: 1fr, auto;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.imagens-compras-recentes img {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.coluna-container {
+  grid-column: 2;
+}
+
+.coluna2 img {
+  width: 148.3px;
+}
+
+.coluna1 {
+  height: auto;
+}
+
+.conteudo-perfil-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  align-content: center;
+}
+
+.perfil-container {
+  padding: 10px 40px;
+}
+
+.conteudo-sobre-perfil {
+  background-color: aliceblue;
+  padding: 30px 70px 30px 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.conteudo-sobre-perfil p {
+  margin-top: 10px;
+}
+
+.conteudo-perfil-sobre {
+  margin-top: 10px;
+}
+
+.perfil-imagem {
+  margin-right: 40px;
+}
+
+.img-edit-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+[data-input-edit] {
+  display: none;
+}
+
+[data-input-edit].ativo {
+  display: block;
+}
+
+[data-set-btnEnviar] {
+  display: none;
+}
+
+[data-set-btnEnviar].ativo {
+  display: block;
+}
+
+input {
+  width: 100px;
+}
+
+[data-set-btnEnviar].ativo2 {
+  display: block;
+}
+
+[data-set-btnEnviar] {
+  display: none;
+}
+
+[data-input-edit] {
+  display: none;
+}
+
+[data-input-edit].ativo {
+  display: block;
+}
+
+@media (max-width: 750px) {
+  .imagens-compras-recentes {
+    grid-template-columns: auto !important;
+  }
+
+  .coluna-container {
+    grid-column: auto;
+  }
+
+  .coluna2 img {
+    min-width: 100px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .conteudo-perfil-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .perfil-container {
+    align-items: center;
+  }
+
+  .perfil-imagem {
+    margin-right: 10px;
+  }
+
+  .conteudo-perfil-item {
+    margin-left: 30px;
+  }
+}
+
+.email-nvalido {
+  color: brown;
+  position: absolute;
+  top: 30px;
+}

@@ -15,27 +15,28 @@ export default function carroselEvent() {
     slider[slideIndex].classList.add("on");
     numero[slideIndex].classList.add("numero-on");
   }
-
-  function nextSlider() {
-    hiderSlide();
-    if (slideIndex === slider.length - 1) {
-      slideIndex = 0;
-    } else {
-      slideIndex++;
+  setInterval(() => {
+    function nextSlider() {
+      hiderSlide();
+      if (slideIndex === slider.length - 1) {
+        slideIndex = 0;
+      } else {
+        slideIndex++;
+      }
+      showSlide();
     }
-    showSlide();
-  }
-
-  function prevSlider() {
-    hiderSlide();
-    if (slideIndex === 0) {
-      slideIndex = slider.length - 1;
-    } else {
-      slideIndex--;
+    nextSlider();
+  }, 10000);
+  setInterval(() => {
+    function prevSlider() {
+      hiderSlide();
+      if (slideIndex === 0) {
+        slideIndex = slider.length - 1;
+      } else {
+        slideIndex--;
+      }
+      showSlide();
     }
-    showSlide();
-  }
-
-  prox.addEventListener("click", nextSlider);
-  prev.addEventListener("click", prevSlider);
+    prevSlider();
+  }, 5000);
 }

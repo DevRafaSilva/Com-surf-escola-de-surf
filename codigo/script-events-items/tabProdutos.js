@@ -1,6 +1,6 @@
 export default function tabNavEvent() {
   const tabItem = document.querySelectorAll(".tab");
-  const produtosTab = document.querySelectorAll(".tabnav-event");
+  const produtosTab = document.querySelectorAll(".section-produto");
   const tabContainer = document.querySelectorAll(".tab");
 
   function tabNavEvent(index) {

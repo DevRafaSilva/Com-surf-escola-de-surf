@@ -27,13 +27,6 @@
           <div class="logo-nav">
             <img class="logo" src="/logo/logo_comsurf2.png" alt="" />
           </div>
-          <div class="barra-de-pesquisa">
-            <input type="text" />
-            <img
-              src="/icones-header/search_FILL0_wght400_GRAD0_opsz24 1.svg"
-              alt=""
-            />
-          </div>
           <img
             class="menu-mobile"
             src="/icones-header/menu_FILL0_wght400_GRAD0_opsz24.svg"
@@ -69,6 +62,9 @@
               <a data-cadastrese-link class="btn-principal" href=""
                 >CADASTRE-SE</a
               >
+              <a data-cadastrese-link class="btn-principal conta-principal" href="perfil.html"
+                >CONTA</a
+              >
             </li>
             <li>
               <a data-carrinho-de-compras="" href=""
@@ -85,8 +81,8 @@
     </header>
     <section class="carrinho-section">
       <div data-container-carrinho="" class="carrinho-item">
-        <div class="item">
-          <div class="item-carrinho"></div>
+        <div class="item-carrinho">
+          <ul class="lista-produtos"></ul>
         </div>
         <div class="border">
           <span class="total">TOTAL:</span>
@@ -94,6 +90,7 @@
         </div>
         <div class="btn-secundario">
           <a href="">COMPRAR</a>
+          <a class="limpar-btn" href="">LIMPAR</a>
         </div>
       </div>
     </section>
@@ -102,16 +99,23 @@
         <form action="get">
           <span data-btn-fechar class="btn-fechar">X</span>
           <div class="email">
-            <label for="email">Email</label>
+            <label for="emailLogin">Email</label>
             <div class="icone">
               <img src="/icones-input/emailicone.svg" alt="" />
-              <input type="email" name="" id="" />
+              <input class="email-login" id="emailLogin" type="email" name=""/>
+              <div class="error">
+                <span class="erro-email-login"></span>
+                <span class="erro-invalido-email-login"></span>
+                <span class="erro-menssagem-login"></span>
+              </div>
             </div>
           </div>
           <div class="senha">
-            <label for="senha">Senha</label>
+            <label for="senhalogin">Senha</label>
             <div class="icone">
-              <input type="password" />
+              <input class="senha-login" id="senhalogin"  type="password" />
+              <span class="erro-menssagem-login"></span>
+              <span class="erro-invalido-senha-login"></span>
               <img
                 class="icone-input"
                 src="/icones-input/key_FILL0_wght400_GRAD0_opsz24 3.svg"
@@ -123,7 +127,7 @@
             <div class="info-senha">
               <a href="">Perdeu a senha?</a>
             </div>
-            <div class="btn-form">
+            <div class="btn-form login-btn">
               <a href="">Entrar</a>
             </div>
           </div>
@@ -158,7 +162,7 @@
               <input type="password" />
             </div>
           </div>
-          <div class="btn-form">
+          <div class="btn-form cadastro">
             <a href="">Entrar</a>
           </div>
         </form>
@@ -169,25 +173,12 @@
         <span class="numero-on">1</span>
         <span>2</span>
       </div>
-      <div class="carrosel-item">
-        <div class="seta-prox">
-          <img
-            src="/icones-arrow/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />
-        </div>
-        <div class="seta-prev">
-          <img
-            src="/icones-arrow/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
-            alt=""
-          />
-        </div>
         <div class="imgs-item">
           <img
             class="slide-img on"
             src="/Carrosel imagens/Rectangle 6.png"
             alt=""
-          />
+              />
           <img class="slide-img" src="/Carrosel imagens/carrosel1.png" alt="" />
         </div>
       </div>
@@ -233,7 +224,7 @@
           <div class="tab on">
             <h4>Skate</h4>
           </div>
-          <div class="tab">
+          <div class="tab surf">
             <h4>Pranchas</h4>
           </div>
           <div class="tab">
@@ -265,532 +256,459 @@
             />
           </div>
         </div>
-        <!-- SKATE CARROSEL 1 -->
-        <div class="evento-carrosel on">
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+        <section class="section-produto on">
+          <div class="evento-carrosel on">
+            <div class="produtos-skates">
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate1.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Element</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 1.500 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Skate/skate1.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate2.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Element</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 1.100 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img
-                data-carrinho-item
-                data-img-produto
-                src="/Skate/skate2.jpg"
-                alt=""
-              />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Flip</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.800,00</span>
-              <p>9X de R$ 200,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate3.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Reverse</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 1.300 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Skate/skate3.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Creme</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$2.360,00</span>
-              <p>10X de R$ 230,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div  class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate4.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Flip</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 1.700 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Skate/skate4.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Exit</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
             </div>
           </div>
-        </div>
-        <!-- SKATE CARROSEL 2 -->
-        <div class="evento-carrosel">
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+          <div class="evento-carrosel">
+            <div class="produtos-skates">
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate1.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Element</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 1.900 </span>
+                  <div class="contador-de-produtos">
+                    <spna class="cont-soma span-cont">+</spna>
+                    <spna class="cont-index">0</spna>
+                    <spna class="cont-subtrai span-cont">-</spna>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Skate/skate4.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate2.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Element</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 1.000 </span>
+                  <div class="contador-de-produtos">
+                    <spna class="cont-soma span-cont">+</spna>
+                    <spna class="cont-index">0</spna>
+                    <spna class="cont-subtrai span-cont">-</spna>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Skate/skate1.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Flip</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.800,00</span>
-              <p>9X de R$ 200,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate3.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Quix</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 2.300 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Skate/skate2.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Flip</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.800,00</span>
-              <p>9X de R$ 200,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Skate/skate4.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Flip</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 2.100 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Skate/skate3.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Flip</h3>
-              <a class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.800,00</span>
-              <p>9X de R$ 200,00 sem juros</p>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- PRANCHA DE SURF PRODUTO -->
-      <div class="tabnav-event">
-        <div class="arrow-navegacao">
-          <div class="index-carrosel top-label">
-            <div class="label on">
-              <label for=""></label>
-            </div>
-            <div class="label">
-              <label for=""></label>
-            </div>
-          </div>
-          <div class="next">
-            <img
-              src="/icones-arrow/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />
-          </div>
-          <div class="prev">
-            <img
-              src="/icones-arrow/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="evento-carrosel on">
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+        </section>
+        <section class="section-produto">
+          <div class="evento-carrosel on">
+            <div class="produtos-skates">
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/prancha3.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Element</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 2.000 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/prancha1.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>prancha de surf em estoque</span>
-              <h3 data-carrinho-item>Prancha long Exit</h3>
-              <span data-carrinho-item class="Preco-none">R$4.360,00</span>
-              <p>10X de R$ 466,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/prancha4.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Prancha de surf LongNext</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span> 1.500 </span>
+                  <div class="contador-de-produtos">
+                    <spna class="cont-soma span-cont">+</spna>
+                    <spna class="cont-index">0</spna>
+                    <spna class="cont-subtrai span-cont">-</spna>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/prancha3.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>prancha de surf em estoque</span>
-              <h3 data-carrinho-item>Prancha Lost</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$3.360,00</span>
-              <p>10X de R$ 336,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/pramcha6.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Prancha de surf EX-treme</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 2.50 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/prancha4.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>prancha de surf em estoque</span>
-              <h3 data-carrinho-item>Prancha legend</h3>
-              <a href="" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$2.360,00</span>
-              <p>10X de R$ 236,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/prancha1.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Prancha de surf Exit</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 2.500 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/pramcha6.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>prancha de surf em estoque</span>
-              <h3 data-carrinho-item>Prancha legend</h3>
-              <a href="" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$2.360,00</span>
-              <p>10X de R$ 236,00 sem juros</p>
             </div>
           </div>
-        </div>
-        <!-- PRANCHA DE SURF CARROSEL 2 -->
-        <div class="evento-carrosel">
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+          <div class="evento-carrosel">
+            <div class="produtos-skates">
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/prancha3.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Element</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 2.600 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/prancha5.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span data-carrinho-item>Skate em estoque</span>
-              <h3>Skate long Element</h3>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/prancha4.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Prancha de surf LongNext</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span> 1.500 </span>
+                  <div class="contador-de-produtos">
+                    <spna class="cont-soma span-cont">+</spna>
+                    <spna class="cont-index">0</spna>
+                    <spna class="cont-subtrai span-cont">-</spna>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/pramcha6.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>prancha de surf em estoque</span>
-              <h3 data-carrinho-item>Prancha Lost</h3>
-              <a href="" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$3.360,00</span>
-              <p>10X de R$ 336,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/pramcha6.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Prancha de surf EX-treme</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 2.900 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/prancha3.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>prancha de surf em estoque</span>
-              <h3 data-carrinho-item>Prancha legend</h3>
-              <a href="" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$2.360,00</span>
-              <p>10X de R$ 236,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/prancha/prancha1.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Prancha de surf Exit</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 3.000 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/prancha/pranch2.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>prancha de surf em estoque</span>
-              <h3 data-carrinho-item>Prancha legend</h3>
-              <a href="" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$2.360,00</span>
-              <p>10X de R$ 236,00 sem juros</p>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- QUILHA PRODUTO  -->
-      <div class="tabnav-event">
-        <div class="arrow-navegacao">
-          <div class="index-carrosel top-label">
-            <div class="label on">
-              <label for=""></label>
-            </div>
-            <div class="label">
-              <label for=""></label>
-            </div>
           </div>
-          <div class="next">
-            <img
-              src="/icones-arrow/arrow_back_ios_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />
-          </div>
-          <div class="prev">
-            <img
-              src="/icones-arrow/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg"
-              alt=""
-            />
-          </div>
-        </div>
-        <!-- QUILHA CARROSEL 1 -->
-        <div class="evento-carrosel on">
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+        </section>
+
+        <section class="section-produto">
+          <div class="evento-carrosel on">
+            <div class="produtos-skates">
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Quilhas/quilha4.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Skate LongBoard Element</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 3.50 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Quilhas/quilha1.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Quilha em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Quilhas/quilha3.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Prancha de surf LongNext</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span> 1.500 </span>
+                  <div class="contador-de-produtos">
+                    <spna class="cont-soma span-cont">+</spna>
+                    <spna class="cont-index">0</spna>
+                    <spna class="cont-subtrai span-cont">-</spna>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Quilhas/quilha4.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Quilha em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Quilhas/quilha2.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Quilha de surf EX-treme</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 3.900 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Quilhas/quilha2.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Quilha em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+              <div class="produto-skate-item">
+                <div class="adicionar-container">
+                  <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                  <img class="produto-img" src="/Quilhas/quilha1.jpg" alt="Skate long">
+                </div>
+                <div class="conteudo-skate-item-produto">
+                  <h2 data-nome-produto>Quilha de surf Exit</h2>
+                  <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                  <span data-preco-produto> 3.250 </span>
+                  <div class="contador-de-produtos">
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Quilhas/quilha3.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Quilha em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
             </div>
           </div>
-        </div>
-        <!-- QUILHA CARROSEL 2 -->
-        <div class="evento-carrosel">
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
+          </div>
+          <div class="evento-carrosel">
+              <div class="produtos-skates">
+                <div class="produto-skate-item">
+                  <div class="adicionar-container">
+                    <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                    <img class="produto-img" src="/Quilhas/quilha4.jpg" alt="Skate long">
+                  </div>
+                  <div class="conteudo-skate-item-produto">
+                    <h2 data-nome-produto>Skate LongBoard Element</h2>
+                    <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                    <span data-preco-produto> 2.350 </span>
+                    <div class="contador-de-produtos">
+                      <div class="contador-de-produtos">
+                        <spna class="cont-soma span-cont">+</spna>
+                        <spna class="cont-index">0</spna>
+                        <spna class="cont-subtrai span-cont">-</spna>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="produto-skate-item">
+                  <div class="adicionar-container">
+                    <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                    <img class="produto-img" src="/Quilhas/quilha3.jpg" alt="Skate long">
+                  </div>
+                  <div class="conteudo-skate-item-produto">
+                    <h2 data-nome-produto>Prancha de surf LongNext</h2>
+                    <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                    <span> 1.500 </span>
+                    <div class="contador-de-produtos">
+                      <spna class="cont-soma span-cont">+</spna>
+                      <spna class="cont-index">0</spna>
+                      <spna class="cont-subtrai span-cont">-</spna>
+                    </div>
+                  </div>
+                </div>
+                <div class="produto-skate-item">
+                  <div class="adicionar-container">
+                    <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                    <img class="produto-img" src="/Quilhas/quilha2.jpg" alt="Skate long">
+                  </div>
+                  <div class="conteudo-skate-item-produto">
+                    <h2 data-nome-produto>Quilha de surf EX-treme</h2>
+                    <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                    <span data-preco-produto> 3.900 </span>
+                    <div class="contador-de-produtos">
+                      <div class="contador-de-produtos">
+                        <spna class="cont-soma span-cont">+</spna>
+                        <spna class="cont-index">0</spna>
+                        <spna class="cont-subtrai span-cont">-</spna>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="produto-skate-item">
+                  <div class="adicionar-container">
+                    <img  aria-label="Adcionar ao carrinho" data-toolti-event class="add-imagem" src="/addimg/Vector.svg" alt="">
+                    <img class="produto-img" src="/Quilhas/quilha1.jpg" alt="Skate long">
+                  </div>
+                  <div class="conteudo-skate-item-produto">
+                    <h2 data-nome-produto>Quilha de surf Exit</h2>
+                    <p class="descricao-produto">Feito com Fibras de carbono para garantir maior segurança contra impactos</p>
+                    <span data-preco-produto> 1.300 </span>
+                    <div class="contador-de-produtos">
+                      <div class="contador-de-produtos">
+                        <spna class="cont-soma span-cont">+</spna>
+                        <spna class="cont-index">0</spna>
+                        <spna class="cont-subtrai span-cont">-</spna>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <img data-carrinho-item src="/Quilhas/quilha4.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
           </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
-              </div>
-              <img data-carrinho-item src="/Quilhas/quilha2.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
-              </div>
-              <img data-carrinho-item src="/Quilhas/quilha3.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-          <div class="produto-item-conteudo">
-            <div class="produtos-item">
-              <div
-                class="tooltip"
-                data-toolti-event
-                aria-label="Adicionar ao carrinho"
-              >
-                <img src="/addimg/Vector.svg" alt="" />
-              </div>
-              <img data-carrinho-item src="/Quilhas/quilha4.jpg" alt="" />
-            </div>
-            <div class="conteudo-item-produtos">
-              <span>Skate em estoque</span>
-              <h3 data-carrinho-item>Skate long Element</h3>
-              <a href="#" class="btn-comprar">+COMPRAR</a>
-              <span data-carrinho-item class="Preco-none">R$1.360,00</span>
-              <p>10X de R$ 360,00 sem juros</p>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
       <div class="index-carrosel bottom-label-none">
         <div class="label on">
@@ -831,38 +749,44 @@
       </div>
     </section>
     <article class="formulario">
-      <div class="login">
-        <form class="orcamento-formulario" action="get">
-          <h1>SOLICITE UM ORÇAMENTO</h1>
-          <div class="form-item">
-            <div class="nome">
-              <label for="name">Nome</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div class="sobrenome">
-              <label for="name2">Sobrenome</label>
-              <input type="text" name="name2" id="name2" />
+      <form class="orcamento-formulario" action="get">
+        <h1>SOLICITE UM ORÇAMENTO</h1>
+        <div class="form-item">
+          <div class="nome">
+            <label for="name">Nome</label>
+            <input data-inputs-orcamento="" required type="text" name="name" id="name" />
+            <span class="error-name-number"></span>
+          </div>
+          <div class="sobrenome">
+            <label for="name2">Sobrenome</label>
+            <input data-inputs-orcamento="" required type="text" name="name2" id="name2" />
+            <span class="error-sobre-number"></span>
+          </div>
+          <div class="info-geral">
+            <div class="info-geral">
+              <label for="email">Email</label>
+              <input data-inputs-orcamento="" required type="email" name="email" id="email" />
+              <span class="error-email"></span>
             </div>
             <div class="info-geral">
-              <div class="info-geral">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
-              </div>
-              <div class="info-geral">
-                <label for="cpf">CPF</label>
-                <input type="number" name="cpf" id="cpf" />
-              </div>
-              <div class="info-geral">
-                <label for="telefone">telefone</label>
-                <input type="number" name="telefone" id="telefone" />
-              </div>
+              <label for="cpf">CPF</label>
+              <input data-inputs-orcamento="" required type="number" name="cpf" id="cpf" />
             </div>
-            <div class="btn-orcamento">
-              <a href="">ENVIAR</a>
+            <div class="info-geral">
+              <label for="telefone">telefone</label>
+              <input data-inputs-orcamento="" required type="number" name="telefone" id="telefone" />
+            </div>
+            <div class="error-mensagem">
+              <span class="error-mensagem-span"></span>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="btn-orcamento">
+            <a data-enviar-cadastro-btn href="">ENVIAR</a>
+          </div>
+        </div>
+      </form>
+    </article>
+    <article class="formulario-login">
       <div class="login">
         <h1>Login</h1>
         <form class="form-login" action="get">
@@ -870,10 +794,16 @@
             <div class="email">
               <label for="email">Email</label>
               <input type="email" />
+              <span class="email-invalido"></span>
             </div>
             <div class="senha">
               <label for="senha">Senha</label>
-              <input type="senh" />
+              <input type="senha" />
+              
+            </div>
+            <div class="error-login">
+              <span class="campos-vazios"></span>
+              <span class="senha-pequena"></span>
             </div>
             <div class="btn-login">
               <a href="">Logar</a>
@@ -918,5 +848,6 @@
       </div>
     </footer>
     <script type="module" src="script.js"></script>
+
   </body>
 </html>
